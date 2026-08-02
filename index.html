@@ -1,24 +1,555 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Home-visit pediatric care enquiries for Dr. Deepali D. Mahakal in Bavdhan, Pune, and nearby areas. Vaccination support, prescribed injections, newborn checks, and growth monitoring."
-    />
-    <meta name="theme-color" content="#0e8799" />
-    <title>Dr. Deepali D. Mahakal | Home-Visit Pediatric Care in Pune</title>
-    <link rel="stylesheet" href="/src/styles.css" />
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      window.gtag = window.gtag || function gtag(){ window.dataLayer.push(arguments); };
-      window.gtag('js', new Date());
-      window.gtag('config', 'G-REPLACE-WITH-YOUR-ID');
+ <head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <meta name="description" content="Doctor home visits in Pune for childhood vaccines and recommended injections. Associated with Sindhu Nursing Home, Kothrud. Enquire by WhatsApp, call, or form." />
+    <meta name="keywords" content="home vaccine Pune, doctor injection at home Pune, paediatric home visit Kothrud, Shree Dhanvantari Kids Care" />
+    <meta name="geo.region" content="IN-MH" />
+    <meta name="geo.placename" content="Pune" />
+    <meta property="og:title" content="Shree Dhanvantari Kids Care — Doctor home visits for vaccines & injections in Pune" />
+    <meta property="og:description" content="Doctor home visits in Pune for childhood vaccines and recommended injections. Associated with Sindhu Nursing Home, Kothrud. Enquire by WhatsApp, call, or form." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:locale:alternate" content="mr_IN" />
+ <title>Shree Dhanvantari Kids Care — Doctor home visits for vaccines & injections in Pune</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ <link
+ href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@500;600&display=swap"
+ rel="stylesheet"
+ />
+ <link rel="stylesheet" href="css/styles.css" />
+     <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Shree Dhanvantari Kids Care",
+      "description": "Doctor home visits in Pune for childhood vaccines and recommended injections.",
+      "areaServed": "Pune",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kothrud",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "IN"
+      },
+      "medicalSpecialty": "Pediatric",
+      "availableService": [
+        "Home vaccination",
+        "Home injection administration"
+      ]
+    }
     </script>
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+ <body>
+ <header class="site-header">
+ <div class="container header-inner">
+ <a class="brand" href="index.html">
+ <div class="brand-mark" aria-hidden="true"><span>S</span></div>
+ <div class="brand-text">
+ <p class="brand-name" data-brand>Shree Dhanvantari Kids Care</p>
+ <span class="brand-sub" data-i18n="brandSub">Care for every Pune family</span>
+ </div>
+ </a>
+ <div class="header-actions">
+ <div class="lang-switch" role="group" aria-label="Language">
+ <button type="button" data-lang="en" class="is-active">EN</button>
+ <button type="button" data-lang="mr">मराठी</button>
+ </div>
+ <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu" data-i18n="menu">Menu</button>
+ </div>
+ <nav class="site-nav" aria-label="Primary">
+ <a href="index.html" data-i18n="navHome">Home</a>
+ <a href="services.html" data-i18n="navServices">Services</a>
+ <a href="about.html" data-i18n="navAbout">About</a>
+ <a href="book.html" data-i18n="navBook">Book a visit</a>
+ <a class="btn btn-primary btn-sm nav-cta" href="book.html" data-i18n="navCta">Request visit</a>
+ </nav>
+ </div>
+ </header>
+
+ <main>
+ <section class="hero">
+ <div class="hero-media" aria-hidden="true">
+ <img src="assets/hero.jpg" alt="" class="hero-photo" />
+ <div class="hero-wash"></div>
+ <span class="hero-blob hero-blob-a"></span>
+ <span class="hero-blob hero-blob-b"></span>
+ <span class="hero-blob hero-blob-c"></span>
+ <span class="hero-dot hero-dot-1"></span>
+ <span class="hero-dot hero-dot-2"></span>
+ <span class="hero-dot hero-dot-3"></span>
+ <span class="hero-dot hero-dot-4"></span>
+ </div>
+ <div class="container hero-content">
+ <div class="hero-kicker" data-i18n="heroKicker">Pune · Doctor at your door · Vaccines & injections </div>
+ <h1 class="brand-name" data-brand>Shree Dhanvantari Kids Care</h1>
+ <p class="hero-lead" data-i18n="heroLead">
+ When your child or family member needs a vaccine or a recommended injection, the doctor can come to your home — careful care, clear guidance, for every Pune family.
+ </p>
+ <div class="btn-row">
+ <a class="btn btn-primary" href="book.html" data-i18n="ctaVisit">Request a home visit</a>
+ <a class="btn btn-secondary" data-whatsapp href="#" target="_blank" rel="noopener" data-i18n="ctaWhatsapp">WhatsApp us</a>
+ </div>
+ <p class="hero-meta">
+ <span data-i18n="heroMetaPrefix">Currently associated with</span>
+ <span data-affiliation>Sindhu Nursing Home</span>,
+ <span data-affiliation-area>Kothrud, Pune</span>
+ </p>
+ </div>
+ </section>
+
+ <div class="assurance" aria-hidden="true">
+ <div class="assurance-track">
+ <span>Doctor comes to your home</span>
+ <span>Vaccines for kids</span>
+ <span>Recommended injections </span>
+ <span>Children, adults &amp; elderly</span>
+ <span>Associated with Sindhu Nursing Home, Kothrud</span>
+ <span>Serving families across Pune</span>
+ <span>Doctor comes to your home</span>
+ <span>Vaccines for kids</span>
+ <span>Recommended injections </span>
+ <span>Children, adults &amp; elderly</span>
+ <span>Associated with Sindhu Nursing Home, Kothrud</span>
+ <span>Serving families across Pune</span>
+ </div>
+ </div>
+
+ <section class="section">
+ <div class="container">
+ <div class="section-head reveal">
+ <span class="eyebrow" data-i18n="whyEyebrow">How we care today</span>
+ <h2 data-i18n="whyTitle">The doctor comes home when a vaccine or injection is needed</h2>
+ <p data-i18n="whyBody">
+ Shree Dhanvantari Kids Care brings paediatric care to your doorstep. If there is a need for vaccination or an existing recommended injection, the doctor can visit your home. Care is offered so every family in Pune can access it — children first, and home injections for adults and elderly when needed.
+ </p>
+ </div>
+
+ <div class="photo-rail reveal">
+ <figure>
+ <img src="assets/pic-friends.jpg" alt="Indian children smiling together" loading="lazy" />
+ <figcaption>Care in familiar surroundings</figcaption>
+ </figure>
+ <figure>
+ <img src="assets/pic-blocks.jpg" alt="Indian child playing outdoors" loading="lazy" />
+ <figcaption>Optional home visits when needed</figcaption>
+ </figure>
+ <figure>
+ <img src="assets/pic-playmates.jpg" alt="Indian children in festive attire" loading="lazy" />
+ <figcaption>Gentle paediatric support</figcaption>
+ </figure>
+ <figure>
+ <img src="assets/pic-family.jpg" alt="Indian family with children outdoors" loading="lazy" />
+ <figcaption>Parents stay involved</figcaption>
+ </figure>
+ </div>
+ </div>
+ </section>
+
+ <section class="section section-muted" style="padding-top: 0">
+ <div class="container">
+ <div class="section-head reveal">
+ <span class="eyebrow" data-i18n="whoEyebrow">Who we help</span>
+ <h2 data-i18n="whoTitle">Children first — home injections for every age</h2>
+ <p data-i18n="whoBody">
+ Kids remain our focus. Home injection visits are also available for adults and elderly patients
+ who need prescribed injectables at home — from every neighbourhood in Pune.
+ </p>
+ </div>
+ <div class="feature-tiles">
+ <article class="feature-tile reveal">
+ <img src="assets/pic-toys.jpg" alt="Smiling Indian girl at home" loading="lazy" />
+ <div class="tile-copy">
+ <h3 data-i18n="tileKids">Children &amp; vaccines</h3>
+ <p data-i18n="tileKidsBody">Paediatric vaccines and injections with parents present.</p>
+ </div>
+ </article>
+ <article class="feature-tile reveal reveal-delay-1">
+ <img src="assets/pic-calm.jpg" alt="Child in Navi Mumbai, Maharashtra" loading="lazy" />
+ <div class="tile-copy">
+ <h3 data-i18n="tileAdults">Adults at home</h3>
+ <p data-i18n="tileAdultsBody">Recommended injections delivered at home.</p>
+ </div>
+ </article>
+ <article class="feature-tile reveal reveal-delay-2">
+ <img src="assets/pic-family.jpg" alt="Family support" loading="lazy" />
+ <div class="tile-copy">
+ <h3 data-i18n="tileElderly">Elderly &amp; mobility</h3>
+ <p data-i18n="tileElderlyBody">Assisted injectable care for those who cannot travel easily.</p>
+ </div>
+ </article>
+ </div>
+ </div>
+ </section>
+
+ <section class="section" style="padding-top: 0">
+ <div class="container">
+ <div class="section-head reveal">
+ <span class="eyebrow" data-i18n="offerEyebrow">What we offer</span>
+ <h2 data-i18n="offerTitle">Vaccines &amp; injections at home</h2>
+ <p data-i18n="offerBody">
+ Request a home visit for childhood vaccines or for injections already recommended by a doctor. The clinician comes to you, explains each step simply.
+ </p>
+ </div>
+ <div class="service-grid">
+ <article class="service-item reveal">
+ <div class="service-num">01</div>
+ <h3 data-i18n="svc1">Childhood vaccines at home</h3>
+ <p data-i18n="svc1Body">
+ Home or arranged vaccination support for eligible children, with clear aftercare guidance
+ for parents.
+ </p>
+ </article>
+ <article class="service-item reveal reveal-delay-1">
+ <div class="service-num">02</div>
+ <h3 data-i18n="svc2">Recommended injections at home</h3>
+ <p data-i18n="svc2Body">
+ Existing doctor-recommended or prescribed injectable medicines given at home for children, adults, and elderly patients.
+ </p>
+ </article>
+ <article class="service-item reveal reveal-delay-2">
+ <div class="service-num">03</div>
+ <h3 data-i18n="svc3">Assisted / anxious patients</h3>
+ <p data-i18n="svc3Body">
+ Calm technique for needle anxiety — whether for a child or an adult who needs support at
+ home.
+ </p>
+ </article>
+ </div>
+ <div class="btn-row reveal" style="margin-top: 2rem">
+ <a class="btn btn-secondary" href="services.html" data-i18n="seeAll">See all services</a>
+ </div>
+ </div>
+ </section>
+
+ <section class="section section-ink">
+ <div class="container">
+ <div class="pull-quote reveal">
+ <p data-i18n="quote">
+ “If a vaccine or recommended injection is needed, we come to your home — careful care at your door.”
+ </p>
+ <cite data-i18n="quoteCite">Our promise to Pune families</cite>
+ </div>
+ </div>
+ </section>
+
+ <section class="section">
+ <div class="container">
+ <div class="section-head reveal">
+ <span class="eyebrow" data-i18n="momentsEyebrow">Moments of care</span>
+ <h2 data-i18n="momentsTitle">Respectful care for every home</h2>
+ <p data-i18n="momentsBody">
+ Whether you live nearby in Kothrud or across the city — we aim for clear communication, fair
+ treatment, and unhurried visits.
+ </p>
+ </div>
+ <div class="gallery-wall reveal">
+ <figure class="g-wide">
+ <img src="assets/pic-joy.jpg" alt="Child in traditional Marathi attire" loading="lazy" />
+ </figure>
+ <figure>
+ <img src="assets/pic-friends.jpg" alt="Indian children in a group" loading="lazy" />
+ </figure>
+ <figure>
+ <img src="assets/pic-blocks.jpg" alt="Indian child with a toy car" loading="lazy" />
+ </figure>
+ <figure>
+ <img src="assets/hero.jpg" alt="Happy Indian children" loading="lazy" />
+ </figure>
+ <figure>
+ <img src="assets/pic-playmates.jpg" alt="Indian kids celebrating outdoors" loading="lazy" />
+ </figure>
+ </div>
+ </div>
+ </section>
+
+ <section class="section section-muted" style="padding-top: 0">
+ <div class="container split">
+ <div class="split-visual reveal">
+ <img src="assets/pic-family.jpg" alt="Indian family outdoors" loading="lazy" />
+ </div>
+ <div class="split-copy reveal reveal-delay-1">
+ <span class="eyebrow">How it works</span>
+ <h2>Doctor at your door — vaccines &amp; injections </h2>
+ <p style="color: var(--ink-soft)">
+ When a vaccine or an existing recommended injection is needed,
+ <span data-brand>Shree Dhanvantari Kids Care</span> can send the doctor to your home.
+ Associated with Sindhu Nursing Home, Kothrud — home visits kept for every family.
+ </p>
+ <ul class="checklist">
+ <li>Doctor home visits for vaccines &amp; recommended injections</li>
+ <li>Home care for children, adults &amp; elderly</li>
+ <li>Children, adults &amp; elderly</li>
+ <li>A caregiver can stay with the patient throughout</li>
+ </ul>
+ <div class="btn-row" style="margin-top: 1.6rem">
+ <a class="btn btn-primary" href="about.html">About the practice</a>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <section class="section" style="padding-top: 0">
+ <div class="container">
+ <div class="section-head reveal">
+ <span class="eyebrow" data-i18n="pathEyebrow">The path</span>
+ <h2 data-i18n="pathTitle">From a simple message to a confirmed visit</h2>
+ </div>
+ <div class="steps">
+ <div class="step reveal">
+ <h3 data-i18n="step1">Enquire</h3>
+ <p data-i18n="step1Body">Share the patient’s age, the vaccine or injection needed, and your address.</p>
+ </div>
+ <div class="step reveal reveal-delay-1">
+ <h3 data-i18n="step2">Confirm</h3>
+ <p data-i18n="step2Body">We check suitability, timing, prescription details.</p>
+ </div>
+ <div class="step reveal reveal-delay-2">
+ <h3 data-i18n="step3">Visit</h3>
+ <p data-i18n="step3Body">The doctor arrives at your home — prepared, calm, and focused on the patient.</p>
+ </div>
+ <div class="step reveal reveal-delay-3">
+ <h3 data-i18n="step4">Aftercare</h3>
+ <p data-i18n="step4Body">Clear guidance for the family and next steps if needed.</p>
+ </div>
+ </div>
+ <div class="moment-pics reveal">
+ <figure><img src="assets/pic-toys.jpg" alt="" loading="lazy" /></figure>
+ <figure><img src="assets/pic-calm.jpg" alt="" loading="lazy" /></figure>
+ <figure><img src="assets/pic-visit.jpg" alt="" loading="lazy" /></figure>
+ <figure><img src="assets/pic-circle.jpg" alt="" loading="lazy" /></figure>
+ </div>
+ </div>
+ </section>
+
+ <section class="section section-muted" style="padding-top: 1rem">
+ <div class="container split reverse">
+ <div class="split-visual reveal">
+ <img src="assets/pic-playmates.jpg" alt="Indian children in traditional clothing" loading="lazy" />
+ </div>
+ <div class="split-copy reveal reveal-delay-1">
+ <span class="eyebrow">Visit day</span>
+ <h2>What parents can expect</h2>
+ <div class="moments">
+ <div class="moment">
+ <div class="moment-time">Before</div>
+ <div>
+ <h3>A quick confirm</h3>
+ <p>We reconfirm time, access notes, and anything that helps your child feel settled.</p>
+ </div>
+ </div>
+ <div class="moment">
+ <div class="moment-time">Arrival</div>
+ <div>
+ <h3>Warm introduction</h3>
+ <p>Time to meet your child, explain simply, and let a parent stay right beside them.</p>
+ </div>
+ </div>
+ <div class="moment">
+ <div class="moment-time">Care</div>
+ <div>
+ <h3>Gentle administration</h3>
+ <p>Child-aware technique for vaccines or prescribed injections — never rushed.</p>
+ </div>
+ </div>
+ <div class="moment">
+ <div class="moment-time">After</div>
+ <div>
+ <h3>Parent guidance</h3>
+ <p>What to watch for, comfort tips, and when to call us or seek urgent care.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+
+      <section class="section section-muted kids-learn-section" id="kids-learn" aria-labelledby="learn-heading">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow" data-i18n="learnEyebrow">Patient education</span>
+            <h2 id="learn-heading" data-i18n="learnTitle">Hand hygiene &amp; how infection spreads</h2>
+            <p data-i18n="learnLead">
+              A brief clinical walkthrough — proper handwashing technique, and how pathogens move from contaminated hands into the body.
+            </p>
+          </div>
+
+          <div class="learn-tabs reveal" role="tablist" aria-label="Education topics">
+            <button type="button" class="learn-tab is-active" data-learn-tab="wash" role="tab" aria-selected="true" data-i18n="learnTabWash">Handwashing technique</button>
+            <button type="button" class="learn-tab" data-learn-tab="germs" role="tab" aria-selected="false" data-i18n="learnTabGerms">Pathogen transmission</button>
+          </div>
+
+          <div class="learn-panels reveal">
+            <div class="learn-panel is-active" data-learn-panel="wash" role="tabpanel">
+              <div class="learn-stage wash-stage" data-wash-stage data-step="0">
+                <div class="learn-ring" aria-hidden="true">
+                  <svg viewBox="0 0 120 120">
+                    <circle class="ring-track" cx="60" cy="60" r="52" />
+                    <circle class="ring-progress" cx="60" cy="60" r="52" />
+                  </svg>
+                  <span class="ring-label" data-wash-num>01</span>
+                </div>
+                <svg class="wash-svg" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="handFill" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stop-color="#e8eef6"/>
+                      <stop offset="100%" stop-color="#c5daf5"/>
+                    </linearGradient>
+                    <linearGradient id="waterStroke" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#4a8fd9"/>
+                      <stop offset="100%" stop-color="#1a6bc9"/>
+                    </linearGradient>
+                  </defs>
+                  <rect class="stage-frame" x="24" y="18" width="272" height="164" rx="12" fill="none" stroke="rgba(26,107,201,0.12)" stroke-width="1"/>
+                  <!-- water line -->
+                  <path class="wash-water" d="M70 150 C120 168 200 168 250 150" fill="none" stroke="url(#waterStroke)" stroke-width="2.5" stroke-linecap="round"/>
+                  <!-- left hand outline -->
+                  <g class="hand hand-l" transform="translate(78 48)">
+                    <path fill="url(#handFill)" stroke="#0d4a94" stroke-width="1.6"
+                      d="M42 98 C18 92 12 68 22 48 C28 36 40 34 48 42 L52 18 C54 10 64 8 68 16 L72 40 C76 28 88 28 90 40 L94 52 C100 40 112 44 110 58 L108 78 C118 74 128 84 120 96 C108 112 68 114 42 98 Z"/>
+                  </g>
+                  <!-- right hand outline -->
+                  <g class="hand hand-r" transform="translate(148 48)">
+                    <path fill="#dce7f4" stroke="#0d4a94" stroke-width="1.6"
+                      d="M78 98 C102 92 108 68 98 48 C92 36 80 34 72 42 L68 18 C66 10 56 8 52 16 L48 40 C44 28 32 28 30 40 L26 52 C20 40 8 44 10 58 L12 78 C2 74 -8 84 0 96 C12 112 52 114 78 98 Z"/>
+                  </g>
+                  <!-- soap film -->
+                  <g class="soap-film" opacity="0">
+                    <ellipse cx="160" cy="95" rx="58" ry="28" fill="rgba(26,107,201,0.08)" stroke="rgba(26,107,201,0.25)" stroke-width="1"/>
+                    <circle class="b b1" cx="130" cy="88" r="3.5" fill="rgba(255,255,255,0.9)" stroke="rgba(26,107,201,0.35)"/>
+                    <circle class="b b2" cx="175" cy="100" r="2.5" fill="rgba(255,255,255,0.85)" stroke="rgba(26,107,201,0.3)"/>
+                    <circle class="b b3" cx="155" cy="78" r="2" fill="rgba(255,255,255,0.8)" stroke="rgba(26,107,201,0.25)"/>
+                  </g>
+                  <!-- pathogen markers -->
+                  <g class="wash-germs" opacity="0">
+                    <circle class="g g1" cx="118" cy="86" r="3" fill="#5a7a96"/>
+                    <circle class="g g2" cx="202" cy="92" r="2.5" fill="#5a7a96"/>
+                    <circle class="g g3" cx="160" cy="110" r="2.8" fill="#5a7a96"/>
+                  </g>
+                </svg>
+              </div>
+              <div class="learn-copy">
+                <ol class="wash-steps">
+                  <li data-wash-step class="is-active"><span class="step-idx">01</span><div><strong data-i18n="wash1">Wet</strong><span data-i18n="wash1b">Rinse hands thoroughly with clean running water</span></div></li>
+                  <li data-wash-step><span class="step-idx">02</span><div><strong data-i18n="wash2">Apply soap</strong><span data-i18n="wash2b">Create a full lather covering both hands</span></div></li>
+                  <li data-wash-step><span class="step-idx">03</span><div><strong data-i18n="wash3">Scrub</strong><span data-i18n="wash3b">Palms, dorsum, between fingers, and under nails — about 20 seconds</span></div></li>
+                  <li data-wash-step><span class="step-idx">04</span><div><strong data-i18n="wash4">Rinse</strong><span data-i18n="wash4b">Wash soap and residue away under running water</span></div></li>
+                  <li data-wash-step><span class="step-idx">05</span><div><strong data-i18n="wash5">Dry</strong><span data-i18n="wash5b">Use a clean towel or allow hands to air-dry</span></div></li>
+                </ol>
+                <div class="wash-dots" aria-hidden="true">
+                  <button type="button" data-wash-dot class="is-active"></button>
+                  <button type="button" data-wash-dot></button>
+                  <button type="button" data-wash-dot></button>
+                  <button type="button" data-wash-dot></button>
+                  <button type="button" data-wash-dot></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="learn-panel" data-learn-panel="germs" role="tabpanel" hidden>
+              <div class="learn-stage germ-stage" data-germ-scene data-phase="0">
+                <svg class="germ-svg" viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#eef3f9"/>
+                      <stop offset="100%" stop-color="#d5e3f3"/>
+                    </linearGradient>
+                  </defs>
+                  <rect x="24" y="16" width="272" height="208" rx="12" fill="none" stroke="rgba(26,107,201,0.12)" stroke-width="1"/>
+                  <!-- anatomical line figure -->
+                  <g class="anatomy" fill="none" stroke="#0d4a94" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <circle class="body-head" cx="160" cy="52" r="22" fill="url(#bodyGrad)"/>
+                    <path class="body-torso" d="M160 74 L160 150 M160 96 L118 128 M160 96 L202 128 M160 150 L130 200 M160 150 L190 200" fill="none"/>
+                    <path class="hand-zone hand-zone-l" d="M108 128 C100 132 96 140 100 146" opacity="0.5"/>
+                    <path class="hand-zone hand-zone-r" d="M212 128 C220 132 224 140 220 146" opacity="0.5"/>
+                  </g>
+                  <!-- organ targets -->
+                  <ellipse class="tummy" cx="160" cy="138" rx="16" ry="12" fill="rgba(26,107,201,0.08)" stroke="rgba(26,107,201,0.35)" stroke-width="1"/>
+                  <path class="airway" d="M160 74 L160 118" stroke="#4a8fd9" stroke-width="2" stroke-dasharray="3 5" opacity="0.25"/>
+                  <circle class="entry-face" cx="160" cy="58" r="4" fill="rgba(13,74,148,0.15)" stroke="#0d4a94" stroke-width="1" opacity="0.4"/>
+                  <!-- pathogens as refined dots -->
+                  <g class="travelling-germs">
+                    <g class="tg tg1"><circle r="3.2" fill="#4a5d73"/><circle r="5.5" fill="none" stroke="#4a5d73" stroke-width="0.8" opacity="0.35"/></g>
+                    <g class="tg tg2"><circle r="2.8" fill="#4a5d73"/><circle r="5" fill="none" stroke="#4a5d73" stroke-width="0.8" opacity="0.35"/></g>
+                    <g class="tg tg3"><circle r="2.4" fill="#6b7f94"/></g>
+                    <g class="tg tg4"><circle r="2.6" fill="#6b7f94"/></g>
+                  </g>
+                  <!-- barrier -->
+                  <g class="clean-shield" opacity="0">
+                    <rect x="112" y="36" width="96" height="168" rx="48" fill="none" stroke="#2a7a58" stroke-width="1.8" stroke-dasharray="5 7"/>
+                    <text x="160" y="220" text-anchor="middle" font-size="11" fill="#2a7a58" font-family="Manrope,sans-serif" font-weight="600" letter-spacing="0.08em">HYGIENE BARRIER</text>
+                  </g>
+                </svg>
+              </div>
+              <div class="learn-copy germ-captions" data-germ-caption>
+                <p data-germ-line class="is-active"><span class="step-idx">01</span><span data-i18n="germ1">Contaminated surfaces transfer microbes onto the hands during daily contact.</span></p>
+                <p data-germ-line><span class="step-idx">02</span><span data-i18n="germ2">Hands then touch the face — creating an entry route via mouth or mucosa.</span></p>
+                <p data-germ-line><span class="step-idx">03</span><span data-i18n="germ3">Once inside, pathogens may reach the gastrointestinal or respiratory tract.</span></p>
+                <p data-germ-line><span class="step-idx">04</span><span data-i18n="germ4">Consistent hand hygiene interrupts transmission before colonisation begins.</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0">
+        <div class="container">
+          <div class="cta-band reveal">
+            <div>
+              <h2 data-i18n="ctaTitle">Need a vaccine or injection at home?</h2>
+              <p data-i18n="ctaBody">
+                For children or adults — request a home visit. The doctor comes to you for vaccines or existing recommended injections.
+              </p>
+            </div>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="book.html" data-i18n="ctaBook">Book now</a>
+              <a class="btn btn-secondary" data-phone href="tel:">Call</a>
+            </div>
+          </div>
+        </div>
+      </section>
+ </main>
+
+ <footer class="site-footer">
+ <div class="container footer-grid">
+ <div>
+ <h3 data-brand>Shree Dhanvantari Kids Care</h3>
+ <p data-tagline>Doctor home visits for vaccines & injections</p>
+ <p class="disclaimer" style="margin-top: 1rem">
+ Home visits are by appointment. For emergencies, contact local emergency services. Always follow
+ your paediatrician’s advice for medicines and vaccines.
+ </p>
+ </div>
+ <div>
+ <h3 data-i18n="footerExplore">Explore</h3>
+ <ul>
+ <li><a href="services.html">Services</a></li>
+ <li><a href="about.html">About</a></li>
+ <li><a href="book.html">Book a visit</a></li>
+</ul>
+ </div>
+ <div>
+ <h3 data-i18n="footerContact">Contact</h3>
+ <ul>
+ <li><a data-phone href="tel:">Phone</a></li>
+ <li><a data-email href="mailto:">Email</a></li>
+ <li><span data-hours></span></li>
+ <li><span data-city></span></li>
+ </ul>
+ </div>
+ </div>
+ <div class="container footer-bottom">
+ <span>© <span data-year></span> <span data-brand>Shree Dhanvantari Kids Care</span></span>
+ <span data-i18n="footerHosted">Hosted free on GitHub Pages</span>
+ </div>
+ </footer>
+
+ <script src="js/config.js"></script>
+ <script src="js/i18n.js"></script>
+ <script src="js/store.js"></script>
+ <script src="js/app.js"></script>
+    <script src="js/learn.js"></script>
+ </body>
 </html>

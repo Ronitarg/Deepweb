@@ -1,57 +1,37 @@
-# Dr. Deepali D. Mahakal — Pediatric Home-Visit Landing Page
+# Shree Dhanvantari Kids Care — free paediatric home-visit website
 
-A free-to-host static landing page for pediatric home-visit enquiries in Bavdhan, Pune, and nearby areas.
+Static site for a children’s doctor (vaccines & injections at home). Hosted free on **GitHub Pages**.
 
-## Features
+## Quick start
 
-- Responsive pediatric landing page.
-- Resume-based doctor profile and clinical experience sections.
-- Services for vaccination enquiries, prescribed injections, newborn examination, growth monitoring, and parent counselling.
-- Netlify-compatible enquiry form.
-- Phone, WhatsApp, and email calls to action.
-- Privacy, medical-safety, and emergency disclaimers.
-- Google Analytics-compatible event hooks for contact clicks and enquiry submissions.
-- Sticky mobile contact bar.
+1. Edit **`js/config.js`** (phone, WhatsApp, email, city, maps area, Web3Forms key).
+2. Read **`HOW_IT_WORKS.md`** — how parents use the site, how you get notified, WhatsApp & Google Maps.
+3. Push to GitHub → Settings → Pages → branch `main`.
 
-## Local development
+## Pages
 
-```bash
-npm run dev
-```
+| File | Purpose |
+|------|---------|
+| `index.html` | Landing |
+| `services.html` | Children’s services |
+| `about.html` | Practice info + Google Map (no doctor photo) |
+| `book.html` | Enquiry form |
 
-Open <http://localhost:5173>.
+## Notifications (free)
 
-## Build
+- **Web3Forms** → enquiry emails to your inbox (`web3formsAccessKey` in config)
+- **WhatsApp** → `wa.me` link using your number in config
+- **Phone** → `tel:` links
 
-```bash
-npm run build
-```
+## Security note
 
-The static site is copied to `dist/`.
+Public GitHub Pages = public source files. Never store private passwords or patient records in the repo. See `HOW_IT_WORKS.md`.
 
-## Free deployment options
 
-### Netlify
+## How people find you
 
-1. Connect this repository to Netlify.
-2. Build command: `npm run build`.
-3. Publish directory: `dist`.
-4. Netlify Forms will detect the `home-visit-enquiry` form after deployment.
+See **`HOW_IT_WORKS.md`** — Google Search Console, Google Business Profile, sitemap, and WhatsApp Business auto-reply.
 
-### Vercel / Cloudflare Pages / GitHub Pages
+## WhatsApp / call auto-reply
 
-The page is static and can be hosted on any free static hosting provider. If you do not use Netlify Forms, replace the form with a free provider such as Formspree, Getform, or Google Forms.
-
-## Analytics setup
-
-`index.html` contains a placeholder Google Analytics ID:
-
-```html
-G-REPLACE-WITH-YOUR-ID
-```
-
-Replace it with the real GA4 measurement ID to start visitor tracking. The app pushes events for call, WhatsApp, sticky contact, and enquiry form interactions.
-
-## Medical safety note
-
-This website is for enquiries only and is not an emergency medical service. For severe or rapidly worsening symptoms, families should visit the nearest emergency department immediately.
+Use **WhatsApp Business** greeting + away messages (free). Suggested text is in `HOW_IT_WORKS.md`. The website cannot answer chats by itself.

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin.html
+
+# After Pages is live, set the full sitemap URL, e.g.:
+# Sitemap: https://ronitarg.github.io/Deepweb/sitemap.xml
+Sitemap: YOUR_SITE_URL/sitemap.xml
