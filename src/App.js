@@ -57,7 +57,7 @@ const faqItems = [
   {
     question: 'Which areas are served?',
     answer:
-      'Home visits may be available around Bavdhan, Pune, and nearby areas depending on distance, timing, and case suitability.',
+      'The consultation or visit arrangement is confirmed directly with the doctor after discussing the child’s needs and the doctor’s availability.',
   },
   {
     question: 'What should I do in an emergency?',
@@ -71,8 +71,7 @@ const contact = {
   phoneSecondary: '+91 99231 07387',
   whatsapp: '918411811542',
   emailPrimary: 'deepamahakal60@gmail.com',
-  emailSecondary: 'hadkeron67@gmail.com',
-  address: 'Bavdhan Khurd, Pune - 411021',
+  emailSecondary: 'hhadker@gmail.com',
 };
 
 function telHref(phoneNumber) {
@@ -174,27 +173,27 @@ export function renderApp() {
     <main class="page-shell">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero__content">
-          <p class="eyebrow">Home-visit pediatric care • Pune</p>
+          <p class="eyebrow">Thoughtful care for little ones</p>
           <h1 id="hero-title">Dr. Deepali D. Mahakal</h1>
-          <p class="credentials">BAMS • PG Fellowship in Child Health, BVSS Pune - pursuing</p>
+          <p class="credentials">BAMS • FICH - Pediatrics</p>
           <p class="hero__copy">
-            Pediatric home-visit enquiries for newborn examination, growth and development
+            Pediatric consultation and care enquiries for newborn examination, growth and development
             monitoring, age-appropriate vaccination support, prescribed injections, and parent
-            counselling in Bavdhan, Pune, and nearby locations.
+            counselling. The consultation or visit arrangement can be discussed directly with the doctor.
           </p>
           <div class="notice" role="note">
-            <strong>No clinic / no walk-ins:</strong> This service is for enquiry-based home visits
-            only. Visit availability depends on location, timing, child condition, and medical suitability.
+            <strong>Consultation by prior discussion:</strong> Please contact the doctor to discuss your child’s needs and confirm the consultation arrangement and availability.
           </div>
           <div class="hero__actions" aria-label="Contact options">
             <a class="button button--primary js-track" data-event="click_call_primary" href="tel:${telHref(contact.phonePrimary)}">Call ${contact.phonePrimary}</a>
             <a class="button button--secondary js-track" data-event="click_whatsapp" href="https://wa.me/${contact.whatsapp}" target="_blank" rel="noreferrer">WhatsApp enquiry</a>
           </div>
         </div>
-        <aside class="hero__card" aria-label="Service area details">
-          <span class="card__label">Service area</span>
-          <h2>Bavdhan & nearby Pune areas</h2>
-          <p>Home visits are considered case-by-case for children and newborns, subject to availability.</p>
+        <aside class="hero__card" aria-label="Pediatric care highlights">
+          <img class="hero__art" src="./assets/kids-care-illustration.svg" alt="Friendly illustration of a pediatric doctor caring for a child" />
+          <span class="card__label">Care that puts children first</span>
+          <h2>Every little milestone matters</h2>
+          <p>Discuss your child’s concern with the doctor and confirm the suitable consultation arrangement.
           <ul>
             <li>Vaccination record review</li>
             <li>Newborn and infant checks</li>
@@ -223,8 +222,8 @@ export function renderApp() {
       <section class="section enquiry" aria-labelledby="enquiry-title">
         <div class="section__heading">
           <p class="eyebrow">Book / enquire</p>
-          <h2 id="enquiry-title">Request a home visit or vaccination enquiry</h2>
-          <p>Share basic details and the doctor will respond when available. For urgent symptoms, do not wait for a form response.</p>
+          <h2 id="enquiry-title">Request a consultation</h2>
+          <p>Share a few details and the doctor will discuss the suitable consultation arrangement and availability. For urgent symptoms, do not wait for a form response.</p>
         </div>
         ${enquiryForm()}
       </section>
@@ -253,7 +252,7 @@ export function renderApp() {
         <div>
           <p class="eyebrow">Contact</p>
           <h2 id="contact-title">Speak with Dr. Deepali D. Mahakal</h2>
-          <p>Please call, WhatsApp, or email with your child’s age, concern, location, and preferred visit time.</p>
+          <p>Please call, WhatsApp, or email with your child’s age, concern, and preferred time. The consultation arrangement can be discussed directly with the doctor.</p>
         </div>
         <div class="contact-card">
           <a class="js-track" data-event="click_call_primary_footer" href="tel:${telHref(contact.phonePrimary)}">${contact.phonePrimary}</a>
@@ -261,7 +260,6 @@ export function renderApp() {
           <a class="js-track" data-event="click_whatsapp_footer" href="https://wa.me/${contact.whatsapp}" target="_blank" rel="noreferrer">WhatsApp enquiry</a>
           <a href="mailto:${contact.emailPrimary}">${contact.emailPrimary}</a>
           <a href="mailto:${contact.emailSecondary}">${contact.emailSecondary}</a>
-          <p class="contact-card__note">${contact.address} • Home visits/enquiries only • No clinic or walk-in facility</p>
         </div>
       </section>
 
@@ -288,12 +286,11 @@ export function attachAppEvents() {
       ['Parent / guardian', values.get('guardianName')],
       ['Mobile', values.get('mobile')],
       ['Child age', values.get('childAge')],
-      ['Area', values.get('location')],
       ['Service', values.get('serviceNeeded')],
       ['Preferred date / time', values.get('preferredTime')],
       ['Message', values.get('message')],
     ];
-    const message = 'Home visit enquiry - Shree Dhanvantari Kids Care\\n' +
+    const message = 'Consultation enquiry - Shree Dhanvantari Kids Care\\n' +
       fields.filter(([, value]) => value).map(([label, value]) => label + ': ' + value).join('\\n');
     const url = 'https://wa.me/' + contact.whatsapp + '?text=' + encodeURIComponent(message);
     window.open(url, '_blank', 'noopener,noreferrer');
