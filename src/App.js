@@ -1,69 +1,18 @@
 const services = [
-  {
-    title: 'Age-appropriate vaccinations',
-    description:
-      'IAP schedule-aware vaccination guidance, vaccine-record review, due-date reminders, and vaccination enquiries subject to availability and suitability.',
-  },
-  {
-    title: 'Prescribed injections at home',
-    description:
-      'Doctor-reviewed injection support for children when there is a valid prescription and the child is suitable for the proposed setting.',
-  },
-  {
-    title: 'Newborn examination & care',
-    description:
-      'Newborn wellness checks, feeding guidance, jaundice observations, danger-sign counselling, and early postnatal support.',
-  },
-  {
-    title: 'Growth & milestone monitoring',
-    description:
-      'Weight, height, nutrition, developmental milestones, and parent-friendly guidance for early identification of growth concerns.',
-  },
-  {
-    title: 'Pediatric consultation',
-    description:
-      'Child-friendly assessment for common pediatric concerns, with guidance on when hospital or specialist care is required.',
-  },
-  {
-    title: 'Parent counselling',
-    description:
-      'Practical counselling on nutrition, immunization, behaviour, special-child neurodevelopment concerns, and preventive care.',
-  },
+  { icon: '🍼', title: 'Newborn care', description: 'Newborn wellness checks, feeding guidance, jaundice observations, and early postnatal support.' },
+  { icon: '💉', title: 'Vaccination guidance', description: 'Vaccine-record review, age-appropriate vaccination guidance, and due-date reminders.' },
+  { icon: '🌱', title: 'Growth & milestones', description: 'Weight, height, nutrition, and developmental milestone guidance as your child grows.' },
+  { icon: '🩺', title: 'Pediatric consultation', description: 'Child-friendly assessment for common concerns and guidance on when further care is needed.' },
+  { icon: '🧸', title: 'Child wellness', description: 'Practical support for everyday childhood health, prevention, and healthy routines.' },
+  { icon: '💛', title: 'Parent counselling', description: 'Clear, reassuring guidance to help parents make informed decisions about their child’s care.' },
 ];
 
-const experienceHighlights = [
-  '4+ years of total clinical experience, including pediatric OPD/IPD management and newborn examination and care.',
-  'Current Consultant Pediatrician at Kartik Hospital, Nigdi-Pradhikaran, with exposure to 50+ pediatric OPD patients daily.',
-  'Hands-on experience with pediatric emergencies including asthma, allergic reactions, pneumonia, convulsions, febrile seizures, shock, and respiratory distress.',
-  'Focused on evidence-based treatment, minimal over-prescription, vaccination awareness, growth tracking, and compassionate parent communication.',
-];
-
-const faqItems = [
-  {
-    question: 'Where will the consultation take place?',
-    answer:
-      'Please discuss your child’s needs with the doctor. The consultation location or visit arrangement will be confirmed directly based on availability and medical suitability.',
-  },
-  {
-    question: 'Can vaccines be given at home?',
-    answer:
-      'Vaccination requests are reviewed based on the child’s age, vaccine record, availability, cold-chain suitability, and doctor assessment.',
-  },
-  {
-    question: 'Can injections be given without a prescription?',
-    answer:
-      'Injection support is considered only with a valid prescription or after appropriate medical review.',
-  },
-  {
-    question: 'How do I confirm an appointment?',
-    answer:
-      'Call or WhatsApp the doctor with your child’s age and concern. The doctor will discuss the suitable arrangement and confirm availability.',
-  },
-  {
-    question: 'What should I do in an emergency?',
-    answer:
-      'For severe breathing difficulty, seizures, unconsciousness, dehydration, blue lips, or any emergency symptom, visit the nearest emergency facility immediately.',
-  },
+const faqs = [
+  ['Where will the consultation take place?', 'Please discuss your child’s needs with the doctor. The consultation location or visit arrangement will be confirmed directly based on availability and medical suitability.'],
+  ['Can vaccines be given at home?', 'Vaccination requests are reviewed based on the child’s age, vaccine record, availability, cold-chain suitability, and doctor assessment.'],
+  ['Can injections be given without a prescription?', 'Injection support is considered only with a valid prescription or after appropriate medical review.'],
+  ['How do I confirm an appointment?', 'Call or WhatsApp the doctor with your child’s age and concern. The doctor will discuss the suitable arrangement and confirm availability.'],
+  ['What should I do in an emergency?', 'This website is not an emergency service. For severe breathing difficulty, seizures, unconsciousness, blue lips, or any emergency symptom, visit the nearest emergency facility immediately.'],
 ];
 
 const contact = {
@@ -74,221 +23,127 @@ const contact = {
   emailSecondary: 'hhadker@gmail.com',
 };
 
-function telHref(phoneNumber) {
-  return phoneNumber.replace(/[^+\d]/g, '');
-}
+const heroPhoto = 'https://newtown.neotiahospital.com/upload/fileManager/blog/blog4-june26-banner.webp';
+const familyPhoto = 'https://www.geetanjalihospital.co.in/images/general-medicine.jpg';
 
-function trackEvent(name) {
-  if (typeof window === 'undefined') return;
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({ event: name });
-  if (typeof window.gtag === 'function') {
-    window.gtag('event', name);
-  }
-}
-
+function telHref(phone) { return phone.replace(/[^+\\d]/g, ''); }
 function serviceCards() {
-  return services
-    .map(
-      (service) => `
-        <article class="service-card">
-          <h3>${service.title}</h3>
-          <p>${service.description}</p>
-        </article>
-      `,
-    )
-    .join('');
+  return services.map((s, i) => `
+    <article class="service-card reveal" style="--card-index:${i}">
+      <span class="service-icon" aria-hidden="true">${s.icon}</span>
+      <h3>${s.title}</h3>
+      <p>${s.description}</p>
+      <a href="#enquiry" class="text-link">Enquire <span aria-hidden="true">↗</span></a>
+    </article>`).join('');
 }
-
-function experienceItems() {
-  return experienceHighlights.map((item) => `<li>${item}</li>`).join('');
-}
-
 function faqCards() {
-  return faqItems
-    .map(
-      (item) => `
-        <details class="faq-card">
-          <summary>${item.question}</summary>
-          <p>${item.answer}</p>
-        </details>
-      `,
-    )
-    .join('');
+  return faqs.map(([q,a]) => `<details class="faq-card"><summary>${q}<span class="faq-plus" aria-hidden="true">+</span></summary><p>${a}</p></details>`).join('');
 }
-
 function enquiryForm() {
   return `
-    <form class="enquiry-form">
+    <form class="enquiry-form" id="consultation-form">
       <div class="form-grid">
-        <label>
-          Parent / guardian name
-          <input name="guardianName" type="text" autocomplete="name" required />
-        </label>
-        <label>
-          Mobile number
-          <input name="mobile" type="tel" autocomplete="tel" required />
-        </label>
-        <label>
-          Child age
-          <input name="childAge" type="text" placeholder="e.g. 6 months" required />
-        </label>
-         <label>
-          Service needed
-          <select name="serviceNeeded" required>
-            <option value="">Select service</option>
-            <option>Vaccination enquiry</option>
-            <option>Prescribed injection</option>
-            <option>Newborn examination</option>
-            <option>Growth & milestone monitoring</option>
-            <option>Pediatric consultation / visit</option>
-            <option>General enquiry</option>
-          </select>
-        </label>
-        <label>
-          Preferred date / time
-          <input name="preferredTime" type="text" placeholder="Today evening / Tomorrow morning" />
-        </label>
+        <label>Parent / guardian name<input name="guardianName" autocomplete="name" placeholder="Your name" required /></label>
+        <label>Mobile number<input name="mobile" type="tel" autocomplete="tel" placeholder="Your contact number" required /></label>
+        <label>Child age<input name="childAge" placeholder="e.g. 6 months" required /></label>
+        <label>Service needed<select name="serviceNeeded" required><option value="">Choose a service</option><option>Vaccination enquiry</option><option>Newborn examination</option><option>Growth & milestone monitoring</option><option>Pediatric consultation</option><option>Parent counselling</option><option>General enquiry</option></select></label>
+        <label class="field-full">Preferred date / time<input name="preferredTime" placeholder="e.g. Tomorrow morning" /></label>
       </div>
-      <label>
-        Message
-        <textarea name="message" rows="4" placeholder="Briefly describe the concern. Avoid sharing sensitive reports here."></textarea>
-      </label>
-      <label class="consent">
-        <input name="consent" type="checkbox" required />
-        I agree that this enquiry is not for emergencies and that the doctor may contact me using the details provided.
-      </label>
-      <button class="button button--primary" type="submit">Send enquiry</button>
-      <p class="form-note">Your WhatsApp app will open with the enquiry details ready to send. Please do not include emergency requests or detailed medical reports.</p>
-    </form>
-  `;
+      <label>How can the doctor help?<textarea name="message" rows="4" placeholder="Briefly describe your concern. Please do not share detailed medical reports here."></textarea></label>
+      <label class="consent"><input name="consent" type="checkbox" required /> I understand this is an appointment enquiry, not an emergency service, and agree to be contacted about it.</label>
+      <button class="button button--primary submit-button" type="submit">Send enquiry on WhatsApp <span>↗</span></button>
+      <p class="form-note">Your WhatsApp app will open with the enquiry details ready to send. The doctor will confirm availability and the consultation arrangement.</p>
+    </form>`;
 }
 
 export function renderApp() {
-  return `
-    <main class="page-shell">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero__content">
-          <p class="eyebrow">Thoughtful care for little ones</p>
-          <h1 id="hero-title">Dr. Deepali D. Mahakal</h1>
-          <p class="credentials">BAMS • FICH - Pediatrics</p>
-          <p class="hero__copy">
-            Pediatric consultation and care enquiries for newborn examination, growth and development
-            monitoring, age-appropriate vaccination support, prescribed injections, and parent
-            counselling. The consultation or visit arrangement can be discussed directly with the doctor.
-          </p>
-          <div class="notice" role="note">
-            <strong>Consultation by prior discussion:</strong> Please contact the doctor to discuss your child’s needs and confirm the consultation arrangement and availability.
-          </div>
-          <div class="hero__actions" aria-label="Contact options">
-            <a class="button button--primary js-track" data-event="click_call_primary" href="tel:${telHref(contact.phonePrimary)}">Call ${contact.phonePrimary}</a>
-            <a class="button button--secondary js-track" data-event="click_whatsapp" href="https://wa.me/${contact.whatsapp}" target="_blank" rel="noreferrer">WhatsApp enquiry</a>
-          </div>
-        </div>
-        <aside class="hero__card" aria-label="Pediatric care highlights">
-          <img class="hero__art" src="./assets/kids-care-illustration.svg" alt="Friendly illustration of a pediatric doctor caring for a child" />
-          <span class="card__label">Care that puts children first</span>
-          <h2>Every little milestone matters</h2>
-          <p>Discuss your child’s concern with the doctor and confirm the suitable consultation arrangement.
-          <ul>
-            <li>Vaccination record review</li>
-            <li>Newborn and infant checks</li>
-            <li>Growth, nutrition, and milestone guidance</li>
-          </ul>
-        </aside>
-      </section>
+ return `
+ <main class="page-shell">
+  <header class="site-header">
+   <a class="brand" href="#home" aria-label="Shree Dhanvantari Kids Care home">
+    <span class="brand-mark">✿</span><span class="brand-copy"><strong>Shree Dhanvantari</strong><b>Kids <i>Care</i></b><small>Little smiles. Lifelong wellness.</small></span>
+   </a>
+   <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span><span></span></button>
+   <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#faq">FAQs</a><a href="#contact">Contact</a>
+   </nav>
+   <a class="header-cta" href="https://wa.me/${contact.whatsapp}" target="_blank" rel="noopener noreferrer"> <span>☏</span> WhatsApp</a>
+  </header>
 
-      <section class="section" aria-labelledby="services-title">
-        <div class="section__heading">
-          <p class="eyebrow">Services</p>
-          <h2 id="services-title">Thoughtful pediatric care, every step of the way</h2>
-          <p>Safe, practical, and compassionate pediatric guidance, with the consultation arrangement confirmed directly with the doctor.</p>
-        </div>
-        <div class="service-grid">${serviceCards()}</div>
-      </section>
+  <section class="hero" id="home">
+   <div class="hero-bg-shape hero-bg-shape--one"></div><div class="hero-bg-shape hero-bg-shape--two"></div>
+   <div class="hero-copy reveal">
+    <p class="eyebrow"><span></span> CHILD HEALTH • PARENTAL CARE</p>
+    <h1>Little smiles,<br/><em>big beginnings.</em></h1>
+    <p class="hero-lead">Compassionate pediatric care and thoughtful guidance for every stage of your child’s growing years.</p>
+    <div class="hero-credentials"><span class="credential-dot">✦</span><span><strong>Dr. Deepali D. Mahakal</strong><small>BAMS • FICH - Pediatrics</small></span></div>
+    <div class="hero-actions"><a class="button button--primary" href="#enquiry">Request a consultation <span>→</span></a><a class="button button--quiet" href="#services">Explore services <span>↓</span></a></div>
+    <div class="hero-note"><span>♡</span> Care that listens. Guidance that reassures.</div>
+   </div>
+   <div class="hero-visual reveal">
+    <div class="photo-frame"><img src="${heroPhoto}" alt="Illustrative photograph of a pediatrician speaking warmly with a young child" fetchpriority="high"/><div class="photo-caption"><span class="caption-heart">♡</span><span><strong>A little care goes a long way</strong><small>For every child. For every family.</small></span></div></div>
+    <span class="floating-sticker sticker--top">✦ Growing<br/>together</span><span class="floating-sticker sticker--bottom">♥</span>
+    <div class="hero-orbit" aria-hidden="true">✧</div>
+   </div>
+   <div class="hero-bottom-wave" aria-hidden="true"></div>
+  </section>
 
-      <section class="section split" aria-labelledby="experience-title">
-        <div>
-          <p class="eyebrow">Experience</p>
-          <h2 id="experience-title">Clinical care backed by OPD, IPD, and newborn experience</h2>
-        </div>
-        <ul class="experience-list">${experienceItems()}</ul>
-      </section>
+  <section class="trust-strip" aria-label="Care values"><div><span>♡</span><strong>Child-first approach</strong></div><div><span>✿</span><strong>Gentle communication</strong></div><div><span>✦</span><strong>Guidance for parents</strong></div><div><span>☼</span><strong>Growing well, together</strong></div></section>
 
-      <section class="section enquiry" aria-labelledby="enquiry-title">
-        <div class="section__heading">
-          <p class="eyebrow">Book / enquire</p>
-          <h2 id="enquiry-title">Request a consultation</h2>
-          <p>Share a few details and the doctor will discuss the suitable consultation arrangement and availability. For urgent symptoms, do not wait for a form response.</p>
-        </div>
-        ${enquiryForm()}
-      </section>
+  <section class="section intro-section" id="about">
+   <div class="intro-photo reveal"><img src="${familyPhoto}" alt="Illustrative photograph of a doctor engaging with a child and parent" loading="lazy"/><span class="image-sparkle">✧</span></div>
+   <div class="intro-copy reveal"><p class="eyebrow">A warm welcome</p><h2>Because every child deserves a <em>healthy start.</em></h2><p>Childhood is full of little milestones, new discoveries, and questions. Our aim is to make the healthcare journey feel clearer and more reassuring for both children and parents.</p><p>Connect with the doctor to discuss your child’s needs. The suitable consultation arrangement and availability will be confirmed directly.</p><a class="text-link" href="#contact">Get in touch <span>→</span></a></div>
+  </section>
 
-      <section class="section faq" aria-labelledby="faq-title">
-        <div class="section__heading">
-          <p class="eyebrow">FAQ</p>
-          <h2 id="faq-title">Common questions from parents</h2>
-        </div>
-        <div class="faq-grid">${faqCards()}</div>
-      </section>
+  <section class="section services-section" id="services">
+   <div class="section-heading reveal"><p class="eyebrow">How we can help</p><h2>Care for every <em>little milestone.</em></h2><p>Thoughtful pediatric support, from the newborn days through the growing years.</p></div>
+   <div class="service-grid">${serviceCards()}</div>
+  </section>
 
-      <section class="section disclaimer" aria-labelledby="safety-title">
-        <div>
-          <p class="eyebrow">Safety & privacy</p>
-          <h2 id="safety-title">Important medical information</h2>
-        </div>
-        <div class="disclaimer__content">
-          <p><strong>Emergency warning:</strong> This website is not an emergency service. For seizures, severe breathing difficulty, unconsciousness, severe dehydration, blue lips, or rapidly worsening symptoms, go to the nearest emergency department immediately.</p>
-          <p><strong>Scope:</strong> Consultations, vaccinations, and injections are arranged only after appropriate review and depend on prescription, vaccine availability, cold-chain suitability, and the child’s condition.</p>
-          <p><strong>Privacy:</strong> Enquiry details are used only to respond to your request. Basic visitor analytics may be used to understand page visits and contact-button usage. Avoid submitting detailed medical reports through this form.</p>
-        </div>
-      </section>
+  <section class="care-banner">
+   <div class="banner-decoration" aria-hidden="true">✿</div><div><p class="eyebrow">A partnership with parents</p><h2>Healthy children.<br/><em>Happy tomorrows.</em></h2><p>Have a question about your child’s health? Start a conversation with the doctor.</p></div><a class="button button--light" href="#enquiry">Let's talk <span>→</span></a>
+  </section>
 
-      <section class="section contact" aria-labelledby="contact-title">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h2 id="contact-title">Speak with Dr. Deepali D. Mahakal</h2>
-          <p>Please call, WhatsApp, or email with your child’s age, concern, and preferred time. The consultation arrangement can be discussed directly with the doctor.</p>
-        </div>
-        <div class="contact-card">
-          <a class="js-track" data-event="click_call_primary_footer" href="tel:${telHref(contact.phonePrimary)}">${contact.phonePrimary}</a>
-          <a class="js-track" data-event="click_call_secondary_footer" href="tel:${telHref(contact.phoneSecondary)}">${contact.phoneSecondary}</a>
-          <a class="js-track" data-event="click_whatsapp_footer" href="https://wa.me/${contact.whatsapp}" target="_blank" rel="noreferrer">WhatsApp enquiry</a>
-          <a href="mailto:${contact.emailPrimary}">${contact.emailPrimary}</a>
-          <a href="mailto:${contact.emailSecondary}">${contact.emailSecondary}</a>
-        </div>
-      </section>
+  <section class="section enquiry-section" id="enquiry">
+   <div class="section-heading reveal"><p class="eyebrow">Start a conversation</p><h2>Request a <em>consultation.</em></h2><p>Share a few details and the doctor will discuss your concern, availability, and suitable consultation arrangement.</p></div>
+   ${enquiryForm()}
+  </section>
 
-      <nav class="sticky-contact" aria-label="Quick contact">
-        <a class="js-track" data-event="sticky_call" href="tel:${telHref(contact.phonePrimary)}">Call</a>
-        <a class="js-track" data-event="sticky_whatsapp" href="https://wa.me/${contact.whatsapp}" target="_blank" rel="noreferrer">WhatsApp</a>
-        <a href="#enquiry-title">Enquire</a>
-      </nav>
-    </main>
-  `;
+  <section class="section faq-section" id="faq"><div class="section-heading reveal"><p class="eyebrow">Good to know</p><h2>Questions parents <em>often ask.</em></h2></div><div class="faq-grid">${faqCards()}</div></section>
+
+  <section class="section contact-section" id="contact">
+   <div class="contact-copy"><p class="eyebrow">We're here to listen</p><h2>Let’s talk about your <em>little one.</em></h2><p>Reach out by phone, WhatsApp, or email. The doctor will help you understand the next steps.</p><div class="contact-actions"><a class="button button--primary" href="tel:${telHref(contact.phonePrimary)}">Call the doctor <span>↗</span></a><a class="button button--outline" href="https://wa.me/${contact.whatsapp}" target="_blank" rel="noopener noreferrer">WhatsApp <span>↗</span></a></div></div>
+   <div class="contact-card"><span class="contact-card-icon">✿</span><h3>Shree Dhanvantari Kids Care</h3><a href="tel:${telHref(contact.phonePrimary)}">${contact.phonePrimary}</a><a href="tel:${telHref(contact.phoneSecondary)}">${contact.phoneSecondary}</a><a href="mailto:${contact.emailPrimary}">${contact.emailPrimary}</a><a href="mailto:${contact.emailSecondary}">${contact.emailSecondary}</a><small>Consultation details and availability are confirmed directly with the doctor.</small></div>
+  </section>
+
+  <footer class="site-footer"><a class="footer-brand" href="#home">Shree Dhanvantari <strong>Kids Care</strong></a><p>Compassionate care for brighter beginnings.</p><div class="footer-bottom"><span>© <span id="current-year"></span> Shree Dhanvantari Kids Care</span><span>Dr. Deepali Ronit Hadke <i>·</i> Dr. Deepali D. Mahakal</span></div></footer>
+  <a class="floating-whatsapp" href="https://wa.me/${contact.whatsapp}" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">☏</a>
+ </main>`;
 }
 
 export function attachAppEvents() {
-  document.querySelectorAll('.js-track').forEach((element) => {
-    element.addEventListener('click', () => trackEvent(element.dataset.event));
-  });
-
-  const form = document.querySelector('.enquiry-form');
-  form?.addEventListener('submit', (event) => {
-    event.preventDefault();
-    trackEvent('submit_home_visit_enquiry');
-    const values = new FormData(form);
-    const fields = [
-      ['Parent / guardian', values.get('guardianName')],
-      ['Mobile', values.get('mobile')],
-      ['Child age', values.get('childAge')],
-      ['Service', values.get('serviceNeeded')],
-      ['Preferred date / time', values.get('preferredTime')],
-      ['Message', values.get('message')],
-    ];
-    const message = 'Consultation enquiry - Shree Dhanvantari Kids Care\\n' +
-      fields.filter(([, value]) => value).map(([label, value]) => label + ': ' + value).join('\\n');
-    const url = 'https://wa.me/' + contact.whatsapp + '?text=' + encodeURIComponent(message);
-    window.open(url, '_blank', 'noopener,noreferrer');
-  });
+ const menu=document.querySelector('.menu-toggle');
+ const nav=document.querySelector('.primary-nav');
+ menu?.addEventListener('click',()=>{
+  const open=menu.getAttribute('aria-expanded')==='true';
+  menu.setAttribute('aria-expanded',String(!open));
+  menu.setAttribute('aria-label',open?'Open navigation':'Close navigation');
+  nav?.classList.toggle('is-open',!open);
+ });
+ nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  nav.classList.remove('is-open');menu?.setAttribute('aria-expanded','false');menu?.setAttribute('aria-label','Open navigation');
+ }));
+ const form=document.querySelector('#consultation-form');
+ form?.addEventListener('submit',event=>{
+  event.preventDefault();
+  const values=new FormData(form);
+  const fields=[['Parent / guardian',values.get('guardianName')],['Mobile',values.get('mobile')],['Child age',values.get('childAge')],['Service',values.get('serviceNeeded')],['Preferred date / time',values.get('preferredTime')],['Message',values.get('message')]];
+  const message='Consultation enquiry - Shree Dhanvantari Kids Care\\n'+fields.filter(([,v])=>v).map(([k,v])=>k+': '+v).join('\\n');
+  window.open('https://wa.me/'+contact.whatsapp+'?text='+encodeURIComponent(message),'_blank','noopener,noreferrer');
+ });
+ const year=document.querySelector('#current-year');if(year)year.textContent=new Date().getFullYear();
+ const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
+  if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}
+ }),{threshold:.12});
+ document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 }
