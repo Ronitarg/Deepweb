@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 440" role="img" aria-labelledby="title desc">
+<title id="title">Pediatric doctor with a happy child</title>
+<desc id="desc">A warm, friendly illustration of a doctor in a white coat smiling with a small child, surrounded by soft pastel shapes and hearts.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0d7"/><stop offset="1" stop-color="#dff7f5"/></linearGradient>
+ <linearGradient id="coat" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#dceefa"/></linearGradient>
+</defs>
+<ellipse cx="310" cy="395" rx="245" ry="28" fill="#b8e8e3" opacity=".55"/>
+<circle cx="300" cy="205" r="188" fill="url(#bg)"/>
+<circle cx="120" cy="95" r="30" fill="#ffd67c" opacity=".8"/><circle cx="510" cy="90" r="20" fill="#ff9cae" opacity=".65"/>
+<path d="M170 370c7-80 45-123 111-123s104 43 111 123" fill="url(#coat)" stroke="#9bcbd7" stroke-width="5"/>
+<path d="M215 370c8-54 27-86 66-100l-18 100" fill="#fff" stroke="#b5d8e1" stroke-width="4"/>
+<path d="M347 270l38 100h-75l-16-100" fill="#fff" stroke="#b5d8e1" stroke-width="4"/>
+<path d="M260 154c0-60 36-94 85-94 53 0 82 41 77 100-4 53-31 88-79 88-48 0-83-38-83-94" fill="#4d2e29"/>
+<ellipse cx="341" cy="158" rx="66" ry="78" fill="#eebd9c"/>
+<path d="M276 145c2-60 40-91 91-86 32 3 55 26 59 59-29-14-54-31-73-53-11 31-36 57-77 80" fill="#4d2e29"/>
+<circle cx="321" cy="158" r="5" fill="#293c4b"/><circle cx="367" cy="158" r="5" fill="#293c4b"/>
+<path d="M334 188q15 15 30 0" fill="none" stroke="#a64f54" stroke-width="5" stroke-linecap="round"/>
+<path d="M296 236l45 44 43-45" fill="none" stroke="#6bbac4" stroke-width="5"/>
+<path d="M332 281l-14 30 26 24 24-25-13-29" fill="#f5a9b4"/>
+<path d="M388 280c-2-42 22-70 60-70 43 0 67 34 62 77-4 38-25 62-61 62-38 0-60-27-61-69" fill="#9b603f"/>
+<ellipse cx="450" cy="288" rx="52" ry="62" fill="#f4c49f"/>
+<path d="M399 276c4-46 32-75 69-70 26 3 43 22 47 48-28-7-46-23-57-42-10 27-29 49-59 64" fill="#9b603f"/>
+<circle cx="433" cy="288" r="4.5" fill="#293c4b"/><circle cx="468" cy="288" r="4.5" fill="#293c4b"/>
+<path d="M440 313q13 12 27 0" fill="none" stroke="#b45c5c" stroke-width="4" stroke-linecap="round"/>
+<path d="M390 354c12-25 32-37 60-37 32 0 54 17 65 51v25H390z" fill="#7bd1c8"/>
+<path d="M411 345l-20 18 14 17 20-17M491 344l19 19-13 18-20-17" fill="none" stroke="#e6a47f" stroke-width="15" stroke-linecap="round"/>
+<path d="M125 220c-18-21-49 4-23 28l23 20 23-20c26-24-5-49-23-28z" fill="#ff91a5"/>
+<path d="M520 165c-13-15-35 3-16 20l16 14 16-14c19-17-3-35-16-20z" fill="#ff91a5"/>
+<path d="M190 100l7 17 18 2-14 12 4 18-15-9-16 9 4-18-13-12 18-2z" fill="#ffc85f"/>
+<path d="M535 245l7 17 18 2-14 12 4 18-15-9-16 9 4-18-13-12 18-2z" fill="#ffc85f"/>
+</svg>
