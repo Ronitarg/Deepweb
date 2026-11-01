@@ -23,8 +23,8 @@ const contact = {
   emailSecondary: 'hhadker@gmail.com',
 };
 
-const heroPhoto = 'https://newtown.neotiahospital.com/upload/fileManager/blog/blog4-june26-banner.webp';
-const familyPhoto = 'https://www.geetanjalihospital.co.in/images/general-medicine.jpg';
+const heroPhoto = 'https://images.pexels.com/photos/5998458/pexels-photo-5998458.jpeg?auto=compress&dpr=1&h=750&w=1260';
+const familyPhoto = 'https://images.pexels.com/photos/5998455/pexels-photo-5998455.jpeg?auto=compress&dpr=1&h=750&w=1260';
 
 function telHref(phone) { return phone.replace(/[^+\\d]/g, ''); }
 function serviceCards() {
