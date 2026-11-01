@@ -40,9 +40,9 @@ const experienceHighlights = [
 
 const faqItems = [
   {
-    question: 'Do you have a clinic?',
+    question: 'Where will the consultation take place?',
     answer:
-      'No. This landing page is for home-visit and enquiry requests only. There is no walk-in clinic facility listed here.',
+      'Please discuss your child’s needs with the doctor. The consultation location or visit arrangement will be confirmed directly based on availability and medical suitability.',
   },
   {
     question: 'Can vaccines be given at home?',
@@ -55,9 +55,9 @@ const faqItems = [
       'No. Injection support should be requested only with a valid prescription or after appropriate medical review.',
   },
   {
-    question: 'Which areas are served?',
+    question: 'How do I confirm an appointment?',
     answer:
-      'The consultation or visit arrangement is confirmed directly with the doctor after discussing the child’s needs and the doctor’s availability.',
+      'Call or WhatsApp the doctor with your child’s age and concern. The doctor will discuss the suitable arrangement and confirm availability.',
   },
   {
     question: 'What should I do in an emergency?',
@@ -133,11 +133,7 @@ function enquiryForm() {
           Child age
           <input name="childAge" type="text" placeholder="e.g. 6 months" required />
         </label>
-        <label>
-          Area / location
-          <input name="location" type="text" placeholder="e.g. Bavdhan" required />
-        </label>
-        <label>
+         <label>
           Service needed
           <select name="serviceNeeded" required>
             <option value="">Select service</option>
@@ -243,7 +239,7 @@ export function renderApp() {
         </div>
         <div class="disclaimer__content">
           <p><strong>Emergency warning:</strong> This website is not an emergency service. For seizures, severe breathing difficulty, unconsciousness, severe dehydration, blue lips, or rapidly worsening symptoms, go to the nearest emergency department immediately.</p>
-          <p><strong>Scope:</strong> Home visits, vaccinations, and injections are accepted only after appropriate review and depend on prescription, vaccine availability, cold-chain suitability, location, and child condition.</p>
+          <p><strong>Scope:</strong> Consultations, vaccinations, and injections are arranged only after appropriate review and depend on prescription, vaccine availability, cold-chain suitability, and the child’s condition.</p>
           <p><strong>Privacy:</strong> Enquiry details are used only to respond to your request. Basic visitor analytics may be used to understand page visits and contact-button usage. Avoid submitting detailed medical reports through this form.</p>
         </div>
       </section>
