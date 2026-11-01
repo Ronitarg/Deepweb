@@ -2,12 +2,12 @@ const services = [
   {
     title: 'Age-appropriate vaccinations',
     description:
-      'IAP schedule-aware vaccination guidance, vaccine-record review, due-date reminders, and home-visit vaccination enquiries when suitable.',
+      'IAP schedule-aware vaccination guidance, vaccine-record review, due-date reminders, and vaccination enquiries subject to availability and suitability.',
   },
   {
     title: 'Prescribed injections at home',
     description:
-      'Doctor-reviewed injection support for children when there is a valid prescription and the child is safe for home care.',
+      'Doctor-reviewed injection support for children when there is a valid prescription and the child is suitable for the proposed setting.',
   },
   {
     title: 'Newborn examination & care',
@@ -20,9 +20,9 @@ const services = [
       'Weight, height, nutrition, developmental milestones, and parent-friendly guidance for early identification of growth concerns.',
   },
   {
-    title: 'Pediatric home-visit assessment',
+    title: 'Pediatric consultation',
     description:
-      'Child-friendly assessment for common pediatric concerns with clear advice on when hospital or specialist care is required.',
+      'Child-friendly assessment for common pediatric concerns, with guidance on when hospital or specialist care is required.',
   },
   {
     title: 'Parent counselling',
@@ -52,7 +52,7 @@ const faqItems = [
   {
     question: 'Can injections be given without a prescription?',
     answer:
-      'No. Injection support should be requested only with a valid prescription or after appropriate medical review.',
+      'Injection support is considered only with a valid prescription or after appropriate medical review.',
   },
   {
     question: 'How do I confirm an appointment?',
@@ -141,7 +141,7 @@ function enquiryForm() {
             <option>Prescribed injection</option>
             <option>Newborn examination</option>
             <option>Growth & milestone monitoring</option>
-            <option>Pediatric home visit</option>
+            <option>Pediatric consultation / visit</option>
             <option>General enquiry</option>
           </select>
         </label>
@@ -201,8 +201,8 @@ export function renderApp() {
       <section class="section" aria-labelledby="services-title">
         <div class="section__heading">
           <p class="eyebrow">Services</p>
-          <h2 id="services-title">Pediatric support at your doorstep</h2>
-          <p>Designed for parents who need safe, practical, and compassionate pediatric guidance without a clinic visit.</p>
+          <h2 id="services-title">Thoughtful pediatric care, every step of the way</h2>
+          <p>Safe, practical, and compassionate pediatric guidance, with the consultation arrangement confirmed directly with the doctor.</p>
         </div>
         <div class="service-grid">${serviceCards()}</div>
       </section>
